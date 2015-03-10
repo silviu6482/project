@@ -1,0 +1,21 @@
+/** Overides bootstrap */
+body {
+	margin:10px !important;
+}
+
+/*.wrapper {
+	width: 400px;
+	margin: 0 auto;
+} */
+
+#dashboard-side {
+	
+	background: #222222;
+	min-height: 500px;
+}
+
+#dashboard-main {
+
+	background: #f2f2f2;
+	min-height: 500px;
+}
