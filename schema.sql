@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2015 at 12:59 PM
+-- Generation Time: Mar 11, 2015 at 08:47 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `user`
@@ -73,7 +73,9 @@ INSERT INTO `user` (`user_id`, `login`, `password`, `email`, `date_added`, `date
 (2, 'admin', '2a2a3054b44649ec6739b3a8377e603c3400c10fb79d8895b0cb709a943fec77', 'silviu.ps@gmail.com', '2015-03-10 00:00:00', '2015-03-10 05:00:00'),
 (5, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (6, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(7, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(7, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(8, 'aaa', '422f4efbaff6df4e045eca2ae648e8aba633b2e7da9522110f5458838af0552c', 'bbb', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(9, 'silviu', '4b9e6b34cac9c9a4fb616f0f8dd254bd9a6abd3b03cab0adba1b18c7471c7c06', 'silviu@smuff.ro', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Constraints for dumped tables

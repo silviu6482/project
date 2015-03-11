@@ -1,5 +1,3 @@
-	<div class="span6">
-
 	<form id="login_form" class="form-horizontal" method="post" action="<?=site_url('user/login')?>">
 
 	  <div class="form-group">
@@ -24,9 +22,7 @@
 
 	</form>
 
-	</div>
-
-</div>
+	<a href="<?=site_url('home/register')?>">Register</a>;
 
 <script type="text/javascript">
 	$(function()
