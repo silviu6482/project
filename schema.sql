@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2015 at 06:19 PM
+-- Generation Time: Mar 11, 2015 at 12:59 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `todo` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`todo_id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `user`
@@ -70,7 +70,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`user_id`, `login`, `password`, `email`, `date_added`, `date_modified`) VALUES
 (1, 'test', 'test', 'silviu.parjolea@gmail.com', '2015-03-10 01:00:00', '2015-03-10 02:00:00'),
-(2, 'admin', 'admin', 'silviu.ps@gmail.com', '2015-03-10 00:00:00', '2015-03-10 05:00:00');
+(2, 'admin', '2a2a3054b44649ec6739b3a8377e603c3400c10fb79d8895b0cb709a943fec77', 'silviu.ps@gmail.com', '2015-03-10 00:00:00', '2015-03-10 05:00:00'),
+(5, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 'Test insert', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Constraints for dumped tables
