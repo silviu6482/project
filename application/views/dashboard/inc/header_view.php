@@ -15,6 +15,10 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">Dashboard</a></li>
 					<li><a href="#">User</a></li>
+					<?php if($user_data['type'] == 1){ ?>
+					<li><a href="dashboard/users">Admin</a></li>
+					<?php } ?>
+
 					<li><a href="<?=site_url('/dashboard/logout')?>">Logout</a></li>
 				</ul>
 			</div>

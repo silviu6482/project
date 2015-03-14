@@ -70,34 +70,40 @@ class User extends CI_Controller
 		$this->output->set_output(json_encode(['result' => 0, 'error' => 'Utilizatorul nu a fost creat']));
 	}
 
-	public function test_get()
-	{		
-		$data = $this->user_model->get(1);
-		print_r($data);
+	function delete_user($user_id) {
+			$this->user_model->delete($user_id);
+			redirect(site_url('dashboard/users'));
+			//$this->output->set_output(json_encode(['result' => 1]));
 	}
 
-	public function test_insert()
-	{		
-		$result = $this->user_model->insert([
-			'login' => 'Test insert'
-		]);
-		print_r($result);
+	// public function test_get()
+	// {		
+	// 	$data = $this->user_model->get(1);
+	// 	print_r($data);
+	// }
 
-		//debuging purposes $this->output->enable_profiler(true);
-	}
+	// public function test_insert()
+	// {		
+	// 	$result = $this->user_model->insert([
+	// 		'login' => 'Test insert'
+	// 	]);
+	// 	print_r($result);
+
+	// 	//debuging purposes $this->output->enable_profiler(true);
+	// }
 	
-	public function test_update()
-	{
-		$result = $this->user_model->update([
-			'login' => 'Test update'
-		], 3);
-		print_r($result);
-	}
+	// public function test_update()
+	// {
+	// 	$result = $this->user_model->update([
+	// 		'login' => 'Test update'
+	// 	], 3);
+	// 	print_r($result);
+	// }
 	
-	public function test_delete()
-	{
-		$result = $this->user_model->delete(4);
-		print_r($result);
-	}
+	// public function test_delete()
+	// {
+	// 	$result = $this->user_model->delete(4);
+	// 	print_r($result);
+	// }
 
 }
