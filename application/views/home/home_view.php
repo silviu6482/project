@@ -17,12 +17,13 @@
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
 	      <input type="submit" value="Login" class="btn btn-primary" />
+	      <a class="btn btn-default" href="<?=site_url('home/register')?>">Register</a>
 	    </div>
 	  </div>
 
 	</form>
 
-	<a href="<?=site_url('home/register')?>">Register</a>;
+	
 
 <script type="text/javascript">
 	$(function()

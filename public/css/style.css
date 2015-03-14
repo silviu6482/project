@@ -1,16 +1,17 @@
 /** Overides bootstrap */
 body {
-	margin:10px !important;
+	overflow-x: hidden;
 }
 
 /*.wrapper {
 	width: 400px;
 	margin: 0 auto;
-} */
+}
 
 .container-bootstrap-bug{
-	padding: 0 10px;
+	padding: 0 15px;
 }
+*/
 
 #dashboard-side {
 	

@@ -33,12 +33,11 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <input type="submit" value="Register" class="btn btn-primary" />
+      <a class="btn btn-default" href="<?=site_url('/')?>">Back</a>
     </div>
   </div>
 
 </form>
-
-<a href="<?=site_url('/')?>">Back</a>;
 
 
 <script type="text/javascript">

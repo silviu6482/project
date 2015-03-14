@@ -71,9 +71,34 @@ class User extends CI_Controller
 	}
 
 	function delete_user($user_id) {
-			$this->user_model->delete($user_id);
-			redirect(site_url('dashboard/users'));
-			//$this->output->set_output(json_encode(['result' => 1]));
+		$this->user_model->delete($user_id);
+		redirect(site_url('dashboard/users'));
+
+		//$this->output->set_output(json_encode(['result' => 1]));
+	}
+
+	function reset_pass() {
+		//print_r($_POST);
+		$this->output->set_content_type('application_json');
+
+		$this->form_validation->set_rules('email','Email','required|valid_email');
+		if($this->form_validation->run() == false)
+		{
+			$this->output->set_output(json_encode(['result' => 0, 'error' => $this->form_validation->error_array()]));
+			return false;
+		}
+
+		$email = $this->input->post('email');
+
+		$result = $this->user_model->get(['email' => $email]);
+
+		if ($result) {
+			//trimitem mail
+			$this->output->set_output(json_encode(['result' => 1]));
+			return false;
+		}
+
+		$this->output->set_output(json_encode(['result' => 0, 'error' => ['User not found']]));
 	}
 
 	// public function test_get()

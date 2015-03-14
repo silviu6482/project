@@ -6,11 +6,12 @@
 	</div>
 
 	<div id="dashboard-main" class="col-md-10">
-		<ul>
+		<ul class="list-group">
 			<?php foreach ($users as $user) { ?>
-				<li><?php echo $user['login']; ?> <a href="../user/delete_user/<?php echo $user['user_id']?>">Delete</a></li>
+				<li class="list-group-item"><?php echo $user['login']; ?> <a href="../user/delete_user/<?php echo $user['user_id']?>">Delete</a></li>
 			<?php } ?>
 		</ul>
+
 	</div>
 
 </div>

@@ -11,7 +11,5 @@
 	<header>
 		Test header
 	</header>
-	<div class="container-bootstrap-bug">
-
 	<!-- start of wrapper - ends in footer -->
 	<div class="wrapper">

@@ -25,6 +25,16 @@ class User_model extends CI_Model
 		
 	}
 
+	public function get_by_email($email)
+	{		
+		$q = $this->db->get_where('user', ['email' => $email]);
+		$result = $q->result_array();		
+		if (count($result) > 0){
+			return $result[0];
+		}
+		return false;
+	}
+
 	/**
 	*	@param array $data
 	*	@usage (from user controller)

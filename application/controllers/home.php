@@ -16,6 +16,13 @@ class Home extends CI_Controller
 		$this->load->view('home/inc/footer_view');
 	}
 
+	public function reset_pass()
+	{
+		$this->load->view('home/inc/header_view');
+		$this->load->view('home/reset_pass_view');
+		$this->load->view('home/inc/footer_view');
+	}
+
 	// public function code()
 	// {
 	// 	echo hash('sha256', 'custom' . SALT);

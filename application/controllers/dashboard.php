@@ -15,7 +15,7 @@ class Dashboard extends CI_Controller
 		}
 	 $user = $this->user_model->get($user_id);
 	 $this->user = $user[0];
-	 var_dump($user);
+	 //var_dump($user);
 
 	}
 
@@ -25,7 +25,7 @@ class Dashboard extends CI_Controller
 		$this->load->view('dashboard/inc/header_view', $data);
 		$this->load->view('dashboard/dashboard_view');
 		$this->load->view('dashboard/inc/footer_view');
-		var_dump($this->user);
+		//var_dump($this->user);
 	}
 
 	public function logout()
