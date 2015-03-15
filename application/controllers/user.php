@@ -98,7 +98,41 @@ class User extends CI_Controller
 			return false;
 		}
 
-		$this->output->set_output(json_encode(['result' => 0, 'error' => ['User not found']]));
+		$this->output->set_output(json_encode(['result' => 0, 'error' => ['Userul nu a fost gasit']]));
+	}
+
+	public function update_user()
+	{
+		$this->output->set_content_type('application_json');
+
+		$this->form_validation->set_rules('login','Login','required|min_length[4]|max_length[16]|is_unique[user.login]');
+		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
+		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|matches[confirm_password]');
+		$this->form_validation->set_rules('confirm_password','Confirm password','required');
+
+		if($this->form_validation->run() == false)
+		{
+			$this->output->set_output(json_encode(['result' => 0, 'error' => $this->form_validation->error_array()]));
+			return false;
+		}
+
+		$login = $this->input->post('login');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+
+		$result =$this->user_model->update(['login' => $login, 'email' => $email, 'password' => hash('sha256', $password . SALT)], $user_id);
+
+		//echo($user_id);	
+		//die('not yet ready');
+
+
+		if ($result) {
+			//trimitem mail
+			$this->output->set_output(json_encode(['result' => 1]));
+			return false;
+		}
+
+		$this->output->set_output(json_encode(['result' => 0, 'error' => ['Userul nu a fost updatat']]));
 	}
 
 	// public function test_get()

@@ -28,7 +28,7 @@
 				if (o.result == 1) 
 				{
 					//window.location.href = '<?=site_url('dashboard')?>';
-					alert('Please check your email');
+					//alert('Please check your email');
 				} else 	
 				{
 					var error = [];
