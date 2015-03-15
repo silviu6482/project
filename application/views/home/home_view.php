@@ -18,6 +18,7 @@
 	    <div class="col-sm-offset-2 col-sm-10">
 	      <input type="submit" value="Login" class="btn btn-primary" />
 	      <a class="btn btn-default" href="<?=site_url('home/register')?>">Register</a>
+	      <a class="btn btn-default" href="<?=site_url('home/reset_pass')?>">Reset pass</a>
 	    </div>
 	  </div>
 
