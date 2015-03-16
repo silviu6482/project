@@ -17,6 +17,20 @@
   </div>
 
   <div class="form-group">
+    <label class="col-sm-2 control-label">Phone no.</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="phone" placeholder="001-000-000-0000" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Age</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="age" placeholder="Age" />
+    </div>
+  </div>
+
+  <div class="form-group">
     <label class="col-sm-2 control-label">Password</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" name="password" placeholder="Password" />
