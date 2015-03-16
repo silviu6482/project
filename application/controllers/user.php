@@ -37,6 +37,7 @@ class User extends CI_Controller
 		$this->form_validation->set_rules('login','Login','required|min_length[4]|max_length[16]|is_unique[user.login]');
 		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
 		$this->form_validation->set_rules('phone','Phone','required|alpha_dash|exact_length[16]');
+		$this->form_validation->set_rules('age','Age','required|numeric|exact_length[2]');
 		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|matches[confirm_password]');
 		$this->form_validation->set_rules('confirm_password','Confirm password','required');
 
@@ -111,6 +112,8 @@ class User extends CI_Controller
 		$this->form_validation->set_rules('login','Login','required|min_length[4]|max_length[16]|is_unique[user.login]');
 		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
 		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|matches[confirm_password]');
+		$this->form_validation->set_rules('phone','Phone','required|alpha_dash|exact_length[16]');
+		$this->form_validation->set_rules('age','Age','required|numeric|exact_length[2]');
 		$this->form_validation->set_rules('confirm_password','Confirm password','required');
 
 		if($this->form_validation->run() == false)
@@ -131,7 +134,7 @@ class User extends CI_Controller
 
 		if ($result) {
 			$this->output->set_output(json_encode(['result' => 1]));
-			redirect(site_url('dashboard/users'));
+			//redirect(site_url('dashboard/users'));
 			return false;
 		}
 

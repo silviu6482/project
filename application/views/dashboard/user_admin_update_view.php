@@ -61,7 +61,7 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <input type="submit" value="Update" class="btn btn-primary" />
-      <a class="btn btn-default" href="<?=site_url('/')?>">Back</a>
+      <a class="btn btn-default" href="<?=site_url('dashboard/users')?>">Back</a>
     </div>
   </div>
 
