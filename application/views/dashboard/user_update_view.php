@@ -104,5 +104,3 @@
 	});
 </script>
 
-Dashboard Admin
-

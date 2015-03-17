@@ -1,18 +1,25 @@
-<form id="reset_pass" class="form-horizontal" method="post" action="<?=site_url('user/reset_pass')?>">
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Email</label>
-		<div class="col-sm-10">
-	  		<input type="text" class="form-control" name="email" placeholder="Email" />
-		</div>
+<div class="row">
+	<div id="home-side" class="col-md-6">
+		<form id="reset_pass" class="form-horizontal" method="post" action="<?=site_url('user/reset_pass')?>">
+			<div class="form-group">
+				<label class="col-sm-4 control-label">Email</label>
+				<div class="col-sm-8">
+			  		<input type="text" class="form-control" name="email" placeholder="Email" />
+				</div>
+			</div>
+
+			<div class="form-group">
+			    <div class="col-sm-offset-4 col-sm-8">
+			      <input type="submit" value="Recover" class="btn btn-primary" />
+			      <a class="btn btn-default" href="<?=site_url('/')?>">Back</a>
+			    </div>
+			</div>
+		</form>
 	</div>
 
-	<div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
-	      <input type="submit" value="Recover" class="btn btn-primary" />
-	      <a class="btn btn-default" href="<?=site_url('/')?>">Back</a>
-	    </div>
+	<div id="home-main" class="col-md-6">
 	</div>
-</form>
+</div>
 
 <script type="text/javascript">
 	$(function()
