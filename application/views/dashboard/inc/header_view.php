@@ -13,8 +13,8 @@
 			<div class="navbar-header">
 				<span class="navbar-brand">Project Y</span>
 				<ul class="nav navbar-nav">
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">User</a></li>
+					<li><a href="<?=site_url('dashboard')?>">Dashboard</a></li>
+					<li><a href="<?=site_url('dashboard/user_single')?>">User</a></li>
 					<?php if($user_data['type'] == 1){ ?>
 					<li><a href="<?=site_url('dashboard/users')?>">Admin</a></li>
 					<?php } ?>

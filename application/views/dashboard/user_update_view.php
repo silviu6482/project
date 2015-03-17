@@ -6,39 +6,41 @@
 	</div>
 
 	<div id="dashboard-main" class="col-md-10">
-		<ul class="list-group">
-				<li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li>
-		</ul>
 
-		<div id="update_form_error" class="alert alert_error"></div>
+    <div id="dashboard-main" class="col-md-10">
+    <ul class="list-group">
+        <li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li>
+    </ul>
+		
+    		<div id="update_form_error" class="alert alert_error"></div>
 
-	<form id="update_form" class="form-horizontal" method="post" action="<?=site_url('user/update_user')?><?php echo '/', $user_data['user_id']?>">
+	<form id="update_form" class="form-horizontal" method="post" action="<?=site_url('user/update_user')."/".$user_data['user_id']?>">
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Login</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="login" value="<?php echo htmlspecialchars($user_data['login'])?>"/>
+      <input type="text" class="form-control" name="login" placeholder="Login" value="<?php echo htmlspecialchars($user_data['login'])?>"/>
     </div>
   </div>
   
   <div class="form-group">
     <label class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="email" value="<?php echo htmlspecialchars($user_data['email'])?>"/>
+      <input type="text" class="form-control" name="email" placeholder="Email" value="<?php echo htmlspecialchars($user_data['email'])?>"/>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Phone no.</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($user_data['phone'])?>"/>
+      <input type="text" class="form-control" name="phone" placeholder="001-000-000-0000" value="<?php echo htmlspecialchars($user_data['phone'])?>"/>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Age</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="age" value="<?php echo htmlspecialchars($user_data['age'])?>"/>
+      <input type="text" class="form-control" name="age" placeholder="Age" value="<?php echo htmlspecialchars($user_data['age'])?>"/>
     </div>
   </div>
 
@@ -59,7 +61,7 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <input type="submit" value="Update" class="btn btn-primary" />
-      <a class="btn btn-default" href="<?=site_url('dashboard/users')?>">Back</a>
+      <a class="btn btn-default" href="<?=site_url('dashboard')?>">Back</a>
     </div>
   </div>
 
@@ -84,8 +86,7 @@
 			{
 				if (o.result == 1) 
 				{
-					window.location.href = '<?=site_url('dashboard/users')?>';
-					alert('Update success');
+					window.location.href = '<?=site_url('dashboard')?>';
 				} else 
 				{
 					$("#update_form_error").show();
