@@ -1,21 +1,18 @@
-
 <div class="row">
 
-	<div id="dashboard-side" class="col-md-2">
-
-	</div>
+	<div id="dashboard-side" class="col-md-2"></div>
 
 	<div id="dashboard-main" class="col-md-10">
 		<ul class="list-group">
       <?php foreach ($users as $user) { ?>
--       <li class="list-group-item"><?php echo "User: ", $user['login'], " | Email: ", $user['email'], " | Phone: ", $user['phone'], " | Age: ", $user['age']; ?>
--     <?php } ?></li>
+        <li class="list-group-item"><?php echo "User: ", $user['login'], " | Email: ", $user['email'], " | Phone: ", $user['phone'], " | Age: ", $user['age']; ?>
+      <?php } ?></li>
 				<!--  <li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li> -->
 		</ul>
 
 		<div id="update_form_error" class="alert alert_error"></div>
 
-	<form id="update_form" class="form-horizontal" method="post" action="<?=site_url('user/update_user')?><?php echo '/', $user_data['user_id']?>">
+	<form id="update_form" class="form-horizontal" method="post" action="<?=site_url('user/update_user').'/'.$users[0]['user_id']?>">
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Login</label>

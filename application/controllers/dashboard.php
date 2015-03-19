@@ -79,4 +79,14 @@ class Dashboard extends CI_Controller
 		$this->load->view('dashboard/user_update_view', $data);
 		$this->load->view('dashboard/inc/footer_view');
 	}
+
+	public function add_user()
+	{
+		
+		$data = array('user_data' => $this->user);
+
+		$this->load->view('dashboard/inc/header_view', $data);
+		$this->load->view('dashboard/user_admin_add_view', $data);
+		$this->load->view('dashboard/inc/footer_view');
+	}
 }
