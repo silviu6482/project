@@ -38,12 +38,13 @@ class User extends CI_Controller
 		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
 		$this->form_validation->set_rules('phone','Phone','required|alpha_dash|exact_length[16]');
 		$this->form_validation->set_rules('age','Age','required|numeric|exact_length[2]');
-		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|matches[confirm_password]');
+		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|password_check[1,1,1]|matches[confirm_password]');
 		$this->form_validation->set_rules('confirm_password','Confirm password','required');
 
 		// $this->form_validation->set_message('required', 'Ai uitat ceva?');
 		// $this->form_validation->set_message('valid_email', 'Nu ai o alta adresa de email?');
 		// $this->form_validation->set_message('matches[confirm_password]', 'Parolele nu sunt identice!');
+		//$this->form_validation->set_message('password_check[1,1,1]', 'Parolele trebuie sa contina o litera mare, una mica si un numar!');
 
 
 		if($this->form_validation->run() == false)
@@ -111,7 +112,7 @@ class User extends CI_Controller
 
 		$this->form_validation->set_rules('login','Login','required|min_length[4]|max_length[16]|is_unique[user.login]');
 		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
-		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|matches[confirm_password]');
+		$this->form_validation->set_rules('password','Password','required|min_length[4]|max_length[16]|password_check[1,1,1]|matches[confirm_password]');
 		$this->form_validation->set_rules('phone','Phone','required|alpha_dash|exact_length[16]');
 		$this->form_validation->set_rules('age','Age','required|numeric|exact_length[2]');
 		$this->form_validation->set_rules('confirm_password','Confirm password','required');
@@ -124,9 +125,11 @@ class User extends CI_Controller
 
 		$login = $this->input->post('login');
 		$email = $this->input->post('email');
+		$phone = $this->input->post('phone');
+		$age = $this->input->post('age');
 		$password = $this->input->post('password');
 
-		$result =$this->user_model->update(['login' => $login, 'email' => $email, 'password' => hash('sha256', $password . SALT)], $user_id);
+		$result = $this->user_model->update(['login' => $login, 'email' => $email, 'phone' => $phone, 'age' => $age, 'password' => hash('sha256', $password . SALT)], $user_id);
 
 		//echo($user_id);	
 		//die('not yet ready');
