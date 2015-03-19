@@ -7,7 +7,10 @@
 
 	<div id="dashboard-main" class="col-md-10">
 		<ul class="list-group">
-				<li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li>
+      <?php foreach ($users as $user) { ?>
+-       <li class="list-group-item"><?php echo "User: ", $user['login'], " | Email: ", $user['email'], " | Phone: ", $user['phone'], " | Age: ", $user['age']; ?>
+-     <?php } ?></li>
+				<!--  <li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li> -->
 		</ul>
 
 		<div id="update_form_error" class="alert alert_error"></div>
@@ -17,28 +20,28 @@
   <div class="form-group">
     <label class="col-sm-2 control-label">Login</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="login" value="<?php echo htmlspecialchars($user_data['login'])?>"/>
+      <input type="text" class="form-control" name="login" value="<?php echo htmlspecialchars($users[0]['login'])?>"/>
     </div>
   </div>
   
   <div class="form-group">
     <label class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="email" value="<?php echo htmlspecialchars($user_data['email'])?>"/>
+      <input type="text" class="form-control" name="email" value="<?php echo htmlspecialchars($users[0]['email'])?>"/>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Phone no.</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($user_data['phone'])?>"/>
+      <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($users[0]['phone'])?>"/>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2 control-label">Age</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="age" value="<?php echo htmlspecialchars($user_data['age'])?>"/>
+      <input type="text" class="form-control" name="age" value="<?php echo htmlspecialchars($users[0]['age'])?>"/>
     </div>
   </div>
 
