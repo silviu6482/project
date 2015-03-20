@@ -1,8 +1,8 @@
 <div class="row">
 
-	<div id="dashboard-side" class="col-md-2"></div>
+	<!-- <div id="dashboard-side" class="col-md-2"></div> -->
 
-	<div id="dashboard-main" class="col-md-10">
+	<div id="dashboard-main" class="col-md-12">
 		<ul class="list-group">
       <?php foreach ($users as $user) { ?>
         <li class="list-group-item"><?php echo "User: ", $user['login'], " | Email: ", $user['email'], " | Phone: ", $user['phone'], " | Age: ", $user['age']; ?>

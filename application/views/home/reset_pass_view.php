@@ -1,5 +1,5 @@
 <div class="row">
-	<div id="home-side" class="col-md-6">
+	<div id="home-side" class="col-md-10">
 		<form id="reset_pass" class="form-horizontal" method="post" action="<?=site_url('user/reset_pass')?>">
 			<div class="form-group">
 				<label class="col-sm-4 control-label">Email</label>
@@ -17,8 +17,8 @@
 		</form>
 	</div>
 
-	<div id="home-main" class="col-md-6">
-	</div>
+<!-- 	<div id="home-main" class="col-md-6">
+	</div> -->
 </div>
 
 <script type="text/javascript">

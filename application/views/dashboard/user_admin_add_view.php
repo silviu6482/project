@@ -1,8 +1,8 @@
 <div class="row">
 
-  <div id="dashboard-side" class="col-md-2"></div>
+<!--   <div id="dashboard-side" class="col-md-2"></div> -->
 
-  <div id="dashboard-main" class="col-md-10">
+  <div id="dashboard-main" class="col-md-12">
 
     <div id="add_form_error" class="alert alert_error"></div>
 

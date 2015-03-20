@@ -1,5 +1,5 @@
 <div class="row">
-  <div id="home-side" class="col-md-6">
+  <div id="home-side" class="col-md-10">
     <div id="register_form_error" class="alert alert_error"></div>
 
       <form id="register_form" class="form-horizontal" method="post" action="<?=site_url('user/register')?>">
@@ -56,8 +56,8 @@
       </form>
     </div>
       
-  <div id="home-main" class="col-md-6">
-  </div>
+  <!-- <div id="home-main" class="col-md-6">
+  </div> -->
 
 </div>
 

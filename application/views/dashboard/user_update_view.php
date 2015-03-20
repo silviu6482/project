@@ -1,13 +1,11 @@
 
 <div class="row">
 
-	<div id="dashboard-side" class="col-md-2">
+<!-- 	<div id="dashboard-side" class="col-md-2"> -->
 
 	</div>
 
-	<div id="dashboard-main" class="col-md-10">
-
-    <div id="dashboard-main" class="col-md-10">
+    <div id="dashboard-main" class="col-md-12">
     <ul class="list-group">
         <li class="list-group-item"><?php echo "User: ", $user_data['login'], " | Email: ", $user_data['email'], " | Phone: ", $user_data['phone'], " | Age: ", $user_data['age']; ?></li>
     </ul>
