@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>public/css/style.css" />
 	<script src="<?=base_url()?>public/js/jquery.js"></script>
 	<script src="<?=base_url()?>public/js/bootstrap.js"></script>
+	<script src="<?=base_url()?>public/js/scroll_top.js"></script>
 </head>
 <body>
 	<header>
@@ -15,9 +16,10 @@
 				<span class="navbar-brand">Project Y</span>
 				<ul class="nav navbar-nav">
 					<li><a href="<?=site_url('/')?>">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Info</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="<?=site_url('home/register')?>">Register</a></li>
+					<li><a href="<?=site_url('home/login')?>">Login</a></li>
+					<li><a href="<?=site_url('home/about')?>">About</a></li>
+					<li><a href="<?=site_url('home/contact')?>">Contact</a></li>
 					<li><a href="<?=site_url('/dashboard/logout')?>">Logout</a></li>
 				</ul>
 			</div>

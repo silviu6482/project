@@ -44,6 +44,11 @@ body {
 	padding-top: 10px;
 }
 
+.main_title {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -65,11 +70,43 @@ footer {
 	padding-bottom: 30px;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
 .row {
 
-	width: 540px;
+	width: 600px;
 	margin-right: 0 !important;
 	margin-left: 0 !important;
+}
+
+.text_wrap_right {
+	float: right;
+	margin: 10px;
+}
+
+.text_wrap_left {
+	float: left;
+	margin: 10px;
+}
+
+.scrollToTop{
+	width:100px; 
+	height:130px;
+	padding:10px; 
+	text-align:center; 
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:600px;
+	right:40px;
+	display:none;
+	background: url('http://www.paulund.co.uk/wp-content/uploads/2011/11/1321797631_Arrow-Up.png') no-repeat -10px -10px;
+}
+.scrollToTop:hover{
+	text-decoration:none;
 }

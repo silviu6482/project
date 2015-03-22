@@ -23,6 +23,27 @@ class Home extends CI_Controller
 		$this->load->view('home/inc/footer_view');
 	}
 
+	public function login()
+	{
+		$this->load->view('home/inc/header_view');
+		$this->load->view('home/login_view');
+		$this->load->view('home/inc/footer_view');
+	}
+
+	public function about()
+	{
+		$this->load->view('home/inc/header_view');
+		$this->load->view('home/about_view');
+		$this->load->view('home/inc/footer_view');
+	}
+
+	public function contact()
+	{
+		$this->load->view('home/inc/header_view');
+		$this->load->view('home/contact_view');
+		$this->load->view('home/inc/footer_view');
+	}
+
 	// public function code()
 	// {
 	// 	echo hash('sha256', 'custom' . SALT);
