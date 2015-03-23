@@ -21,8 +21,13 @@ class User_model extends CI_Model
 			$q = $this->db->get_where('user', ['user_id' => $user_id]);
 		}
 
+		return $q->result_array();		
+	}
+
+	public function get_content()
+	{
+		$q = $this->db->get('pages');
 		return $q->result_array();
-		
 	}
 
 	public function get_by_email($email)

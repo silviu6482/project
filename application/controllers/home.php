@@ -32,6 +32,8 @@ class Home extends CI_Controller
 
 	public function about()
 	{
+		$this->load->model('user_model');
+		$result = $this->user_model->get_content();
 		$this->load->view('home/inc/header_view');
 		$this->load->view('home/about_view');
 		$this->load->view('home/inc/footer_view');
