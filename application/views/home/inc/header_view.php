@@ -20,7 +20,7 @@
 					<li><a href="<?=site_url('home/login')?>">Login</a></li>
 					<li><a href="<?=site_url('home/about')?>">About</a></li>
 					<li><a href="<?=site_url('home/contact')?>">Contact</a></li>
-					<li><a href="<?=site_url('/dashboard/logout')?>">Logout</a></li>
+					<li><a href="<?=site_url('home/gallery')?>">Gallery</a></li>
 				</ul>
 			</div>
 		</div>
